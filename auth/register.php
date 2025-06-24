@@ -36,6 +36,8 @@ require_once '../config/config.php';
 
             <button name="submit" >Submit</button>
 
+            <span><p>Already have an account</p><a href="../auth/login.php">Log in</a></span>
+
         </form>
 
     </div>

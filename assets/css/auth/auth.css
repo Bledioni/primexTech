@@ -15,20 +15,35 @@ body{
 
 }
 
+a{
+
+    color: #373737;
+    text-decoration: none;
+    border-bottom: solid 1px #373737;
+    padding-bottom: 0.5rem;
+
+}
+a:visited{
+
+    color: #373737;
+
+}
+
 .main-container{
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    height: 100vh;
 
 
 }
 
+
 .main-container img{
 
-    width: 50rem;
+    width: 50%;
 
 }
 
@@ -49,6 +64,7 @@ form h3{
 
     font-size: 36px;
     margin: 0;
+    font-weight: 500;
 
 }
 
@@ -60,14 +76,86 @@ form button{
     height: 3rem;
     font-weight: 700;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+}
+
+form button:hover{
+
+    background-color: #ed3c3c;
+
+}
+
+form button:active{
+
+    background-color: #7b0707;
 
 }
 
 form input{
 
-    border: none;
+    border:none;
     border-bottom: 1px solid;
-    color: #000000;
-    padding: 0.5rem;
+    color: #373737;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0;
+    font-size: 14px;
+
+}
+
+span{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+@media(max-width:1000px){
+
+    .main-container{
+
+        flex-wrap: wrap;
+    
+
+    }
+
+    .main-container img{
+
+        width: 100%;
+
+    }
+
+    form{
+        background-color: white;
+        padding: 5rem;
+        margin-top: -20rem;
+        width: 90%;
+        margin-inline: 5rem;
+
+    }
+
+
+}
+
+
+@media(max-width:768px){
+
+    form{
+
+        margin: 0;
+        padding: 1rem;
+
+    }
+
+     form h3{
+
+        font-size: 28px;
+
+     }
 
 }
