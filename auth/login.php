@@ -51,17 +51,49 @@
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':email' , $email);
         $stmt->execute();
-        if($stmt->rowCount()> 0){
+        try {
+            
+            if($stmt->rowCount() > 0){
 
             $data = $stmt->fetch();
             // var_dump($data);
 
             if(password_verify($password , $data['password'])){
 
-                echo "Login Succsesfully";
+                $_SESSION['user_id'] = $data['user_id'];
+                $_SESSION['firstname'] = $data['firstname'];
+                $_SESSION['lastname'] = $data['lastname'];
+                $_SESSION['email'] = $data['email'];
+                $_SESSION['password'] = $data['password'];
+                $_SESSION['role'] = $data['role'];
+
+                if($data['role'] === 'admin'){
+
+                    header('refresh: 2; url=../admin/admin.php');
+
+                }
+                else{
+
+                    header('refresh: 2;url=../display/user.php');
+
+                }
+
+            }else{
+
+                echo "<p>Incorrect Password</p>";
 
             }
 
+        }else{
+
+            echo "<p>User does not exists</p>";
+
+        }
+
+        } catch (Exception $e) {
+         
+            echo "<p>Something went wrong</p>";
+            
         }
 
 
