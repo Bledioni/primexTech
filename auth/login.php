@@ -72,7 +72,7 @@
                     header('refresh: 2; url=../admin/admin.php');
 
                 }
-                else{
+                else if($data['role'] === 'user'){
 
                     header('refresh: 2;url=../display/user.php');
 

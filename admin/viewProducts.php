@@ -1,7 +1,7 @@
 <?php
 
     require_once '../config/config.php';
-    if(!isset($_SESSION['role'])){
+    if(!isset($_SESSION['role']) || $_SESSION['role'] !=="admin"){
         header("refresh: 0;url=../auth/login.php");
         die("");
     }
@@ -9,6 +9,8 @@
     $query = "SELECT * FROM products";
     $stmt = $conn->prepare($query);
     $stmt->execute();
+
+    $products = [];
 
     if($stmt->rowCount() > 0){
         $products = $stmt->fetchAll();
@@ -52,8 +54,8 @@
                         <td><?= $product["stock"] ?></td>
                         <td><?= $product["created_at"] ?></td>
                         <td>
-                            <button><a href="updateProduct.php?id=<?= $product["product_id"] ?>">Update</a></button>
-                            <button class="delete"><a href="deleteProduct.php?id=<?= $product["product_id"] ?>">Delete</a></button>
+                            <button><a href="updateProduct.php?product_id=<?= $product["product_id"] ?>">Update</a></button>
+                            <button name="delete" class="delete"><a href="deleteProduct.php?product_id=<?= $product["product_id"] ?>">Delete</a></button>
                         </td>
                     </tr>
                 <?php } ?>

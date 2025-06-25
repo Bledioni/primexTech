@@ -1,11 +1,10 @@
 <?php
-require_once '../config/config.php';
-if(!isset($_SESSION['user_id'])){
 
-    header("refresh: 0;url=../auth/login.php");
-    die();
-
-}
+    require_once '../config/config.php';
+    if(!isset($_SESSION['role']) || $_SESSION['role'] !=="admin"){
+        header("refresh: 0;url=../auth/login.php");
+        die("");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +12,26 @@ if(!isset($_SESSION['user_id'])){
 <head>
     <meta charset="UTF-8">
     <title>Add Product</title>
+    <link rel="stylesheet" href="../assets/admin/adminDashboard.css">
+    <link rel="stylesheet" href="../assets/admin/addProducts.css">
 </head>
 <body>
 
-<form action="./addProducts.php" method="POST" enctype="multipart/form-data">
+    <?php
+    
+         include_once '../inc/adminNavInc.php';
+
+    ?>
+
+<div class="main-container">
+
+<?php
+
+    include_once '../inc/adminInc.php';
+
+?>
+
+    <form action="./addProducts.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="Product Name" required>
     <input type="text" name="category" placeholder="Product Category" required>
     <input type="text" name="description" placeholder="Product Description" required>
@@ -25,6 +40,10 @@ if(!isset($_SESSION['user_id'])){
     <input type="number" name="stock" id="stock" required placeholder="Stock">
     <button name="submit">Submit</button>
 </form>
+
+
+
+</div>
 
 </body>
 </html>
