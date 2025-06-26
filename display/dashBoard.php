@@ -1,0 +1,103 @@
+<?php
+
+    require_once '../config/config.php';
+    if(!isset($_SESSION['role']) || $_SESSION['role'] !=="user"){
+        header("refresh: 0;url=../auth/login.php");
+        die("");
+    }
+
+    $products = [];
+
+    $query = "SELECT * FROM products";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    if($stmt->rowCount() > 0){
+
+        $products = $stmt->fetchAll();
+
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashBoard.css">
+</head>
+<body>
+
+    <?php
+    
+        include_once '../inc/dashBoradNavInc.php';
+
+    ?>
+
+    <?php
+    
+        include_once '../inc/adDashBoardInc.php';
+
+    ?>
+<!-- Scrollable product row -->
+
+<!-- Scroll buttons -->
+<div id="todays">
+    
+    <div id="todays-header">
+        <div id="todaysBox">
+        
+        </div>
+        <div id="todays-text">
+            Today’s
+        </div>
+    </div>
+
+    <div id="todays-header-main">
+        <h3>Flash Sales</h3>
+        <div id="countdown-div">
+            <div id="countdown-days">
+                <p>Days</p>
+                <p>Hours</p>
+                <p>Minutes</p>
+                <p>Seconds</p>
+            </div>
+            <div id="countdown"></div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="button" onclick="scrollLeft()"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="button" onclick="scrollRight()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+   
+<div class="products-scroll" id="productContainer">
+    <?php foreach($products as $product){ ?>
+        <div class="products-secondary">
+
+                <div class="main-product-div">
+                    <img src="../assets/photos/Untitled-1.png" alt="">
+                <div class="product">
+                    <img src="../uploads/<?= $product['image_path'] ?>" alt="">
+                    <div class="add-to-cart">
+                        <p>Add To Cart</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-description">
+                <h3><?= $product['name'] ?></h3>
+                <p><?= $product['price'] ?>$</p>
+             </div>
+
+        </div>
+    <?php } ?>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
+<script src="../assets/js/imageSlider.js"></script>
+<script src="../assets/js/countDown.js"></script>

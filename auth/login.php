@@ -74,7 +74,7 @@
                 }
                 else if($data['role'] === 'user'){
 
-                    header('refresh: 2;url=../display/user.php');
+                    header('refresh: 2;url=../display/dashBoard.php');
 
                 }
 
