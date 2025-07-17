@@ -42,7 +42,7 @@
 
 1. 📥 **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/primexTech.git
+   git clone https://github.com/bledino/primexTech.git
 📂 Move the project to your local web server directory (e.g., htdocs for XAMPP).
 
 🧱 Create a new MySQL database (e.g., primex_db) using phpMyAdmin.
