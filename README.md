@@ -34,7 +34,6 @@
 - 🗃️ MySQL (Database)
 - 🌐 HTML5 & CSS3
 - ⚙️ JavaScript (Vanilla)
-- ✨ jQuery *(optional, for interactivity)*
 
 ---
 
@@ -42,7 +41,7 @@
 
 1. 📥 **Clone the repository**
    ```bash
-   git clone https://github.com/bledino/primexTech.git
+   git clone https://github.com/bledini/primexTech.git
 📂 Move the project to your local web server directory (e.g., htdocs for XAMPP).
 
 🧱 Create a new MySQL database (e.g., primex_db) using phpMyAdmin.
