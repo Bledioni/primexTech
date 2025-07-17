@@ -2,6 +2,17 @@
 <?php
 
     require_once '../config/config.php';
+    
+    $uid = $_SESSION['user_id'];
+
+                    $query = "SELECT * FROM cart_items WHERE user_id = :uid";
+                    $stmt = $conn->prepare($query);
+
+                    $stmt->bindParam(':uid' , $uid);
+
+                    $stmt->execute();
+
+                    $cartData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -37,10 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
-
 <body>
 
+    <!-- navbar per dashboard  -->
     <div class="main-container-nav">
 
         <h3>PrimexTech</h3>
@@ -51,20 +61,42 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="right-container">
 
-            <form action="" method="GET">
-                <input type="search" name="query" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
             <div id="account-cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-user"></i>
+
+            <?php $cartItemCounter = 0; ?>
+
+            <?php foreach ($cartData as $cart) { ?> 
+
+                <?php 
+
+                    $cartItemCounter += $cart['quantity']; 
+                ?>
+
+            <?php } ?>
+
+
+                    <a href="../inc/cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <div class="cartItemsCounter">
+                        <p><?php echo $cartItemCounter; ?></p>
+                    </div>
+
+
+                <i id="account-cart-user" class="fa-solid fa-user"></i>
+                
             </div>
             <i id="bars" class="fa-solid fa-bars"></i>
 
 
         </div>
-
     </div>
+
+    <div id="search-bar">
+        <form action="" method="GET">
+            <input id="search" type="search" name="query" placeholder="Search...">
+            <button id="submit" type="submit">Search</button>
+        </form>
+    </div>
+
     <div class="sidebar" id="sidebar">
   <div class="links">
       <a href="../display/dashBoard.php"><h3>Home</h3></a>

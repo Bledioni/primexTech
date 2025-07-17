@@ -1,0 +1,44 @@
+.button-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.view-all-products{
+    background-color: #DB4444;
+    margin-top: 10rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 1rem;
+    padding-inline: 3rem;
+    cursor: pointer;
+
+}
+
+.product-box h4{
+
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+
+}
+
+.product-box{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.explore-product-photo{
+
+    height: 6rem;
+    width:8rem;
+    padding: 2rem;
+    object-fit: contain;
+    background-color: #f4f4f4;
+
+}

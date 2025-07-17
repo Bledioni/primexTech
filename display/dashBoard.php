@@ -8,7 +8,7 @@
 
     $products = [];
 
-    $query = "SELECT * FROM products";
+    $query = "SELECT * FROM products WHERE type = 'flashsales'";
     $stmt = $conn->prepare($query);
     $stmt->execute();
     if($stmt->rowCount() > 0){
@@ -75,15 +75,11 @@
     <?php foreach($products as $product){ ?>
         <div class="products-secondary">
 
-                <div class="main-product-div">
-                    <img src="../assets/photos/Untitled-1.png" alt="">
-                <div class="product">
-                    <img src="../uploads/<?= $product['image_path'] ?>" alt="">
-                    <div class="add-to-cart">
-                        <p>Add To Cart</p>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <a href="../inc/product.php?product_id=<?= $product['product_id'] ?>">
+                <img class="product-photos" src="../uploads/<?= $product['image_path'] ?>" alt="">
+            </a>
+        </div>
             <div class="product-description">
                 <h3><?= $product['name'] ?></h3>
                 <p><?= $product['price'] ?>$</p>
@@ -92,10 +88,37 @@
         </div>
     <?php } ?>
 </div>
-
-
 </div>
 
+<?php
+
+    include_once '../inc/categories.php';
+
+?>
+
+<?php
+
+    include_once '../inc/bestSellingProducts.php';
+
+?>
+
+<?php
+
+    include_once '../inc/exploreOurProducts.php';
+
+?>
+
+<?php
+
+    include_once '../inc/newArrival.php';
+
+?>
+
+<?php
+
+    include_once '../inc/footer.php';
+
+?>
 
 </body>
 </html>

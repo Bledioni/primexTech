@@ -1,0 +1,143 @@
+#todays-header{
+
+    margin-top: 4rem;
+
+}
+
+.best-selling-products{
+
+    font-size: 30px;
+
+}
+
+
+.product-box-container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.product-box{
+
+    margin-top: 5rem;
+    margin-inline: 0.5rem;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+
+}
+
+.product-box img{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+
+}
+
+.product-box h4{
+
+    margin-top: 3rem;
+}
+
+.product-box p{
+
+    font-weight: 600;
+    margin-top: 0;
+    color: #DB4444;
+}
+
+.grey-photo{
+
+    width: 220px;
+
+}
+
+
+.product-photo{
+
+    margin-inline: 1rem;
+    width: 180px;
+    margin-top: -10rem;
+
+}
+/* 
+SMALL DEVICES */
+
+@media(max-width: 528px){
+    
+    .product-box-container{
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
+
+/* jbl add */
+.jbl-add {
+    margin-top: 8rem;
+    position: relative; 
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.jbl-image-add-div img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.jbl-button-add-div {
+    position: absolute;
+    bottom: 10%;
+    margin-left: 8.5rem;
+    transform: translate(-50%, -50%);
+
+}
+
+.jbl-button-add-div button {
+    padding: 1rem;
+    padding-inline: 3rem;
+    border-radius: 5px;
+    background-color: #00FF66;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+@media(max-width:768px){
+
+    .jbl-button-add-div {
+    position: absolute;
+    bottom: 10%;
+    margin-left: 7.5rem;
+    transform: translate(-50%, -50%);
+
+}
+
+    .jbl-button-add-div button{
+
+
+        padding: 0.5rem;
+    padding-inline: 2rem;
+
+    }
+
+    .jbl-image-add-div img {
+    max-width: 100%;
+    height: 500px;
+    display: block; 
+    object-fit: cover;
+}
+
+}
+

@@ -1,0 +1,50 @@
+
+.product-box-container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.product-box{
+
+    margin-top: 3rem;
+    margin-inline: 0rem;
+    width: 220px;
+    height: 220px;
+    padding: 1rem;
+
+}
+
+.product-box img{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+
+}
+
+.product-box h4{
+
+    margin-top: 3rem;
+
+}
+
+.grey-photo{
+
+    width: 220px;
+
+}
+
+
+.product-photo{
+
+    margin-inline: 1rem;
+    width: 180px;
+    margin-top: -10rem;
+
+}

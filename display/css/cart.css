@@ -1,0 +1,118 @@
+body{
+
+    margin-inline: 6rem;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+
+    font-weight: bold;
+    width: 25%;
+}
+
+.table-line {
+    border-bottom: 2px solid black;
+    margin-top: 1rem;
+}
+
+.cart-photo-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.cart-bottom-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+}
+
+
+.cart-coupon-container input{
+
+   
+    padding: 9px;
+    padding-inline: 2rem;
+
+}
+
+.cart-coupon-container button{
+
+    border-radius: 2px;
+    border: none;
+    color: white;
+    background-color: #DB4444;
+    text-align: center;
+    padding: 10px;
+    padding-inline: 2rem;
+}
+
+.cart-checkout-container{
+
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    border: 2px solid;
+    border-radius: 5px ;
+
+}
+
+.cart-checkout-info{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10rem;
+    border-bottom: 1px solid;
+    
+}
+
+
+.cart-checkout-info:last-child{
+
+    border: none;
+
+}
+
+.cart-checkout-container button{
+
+    margin: 2rem;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    background-color: #DB4444;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.cart-delete-button button{
+
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+}
