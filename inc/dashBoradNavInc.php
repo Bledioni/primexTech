@@ -81,7 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
 
-                <i id="account-cart-user" class="fa-solid fa-user"></i>
+                <a href="../inc/userAuthentication.php"><i id="account-cart-user" class="fa-solid fa-user"></i></a>
+                <a href="../inc/wishlist.php"><i class="fa-solid fa-heart"></i></a>
                 
             </div>
             <i id="bars" class="fa-solid fa-bars"></i>

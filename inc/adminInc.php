@@ -14,6 +14,7 @@
             <a href="admin.php"><i class="fa-solid fa-house"></i> Dashboard</a>
             <a href="../admin/addProducts.php"><i class="fa-solid fa-plus"></i> Add Products</a>
             <a href="../admin/viewProducts.php"><i class="fa-solid fa-clipboard-list"></i> View Products</a>
+            <a href="../admin/addEmployee.php"><i class="fa-solid fa-user-plus"></i> Add An Employee</a>
             <a href="../auth/logout.php"><i class="fa-solid fa-circle-user"></i> Logout</a>
         </div>
 

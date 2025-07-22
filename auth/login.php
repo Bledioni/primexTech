@@ -78,6 +78,12 @@
 
                 }
 
+                else if($data['role'] === 'depoist'){
+
+                    header('refresh: 2; url=../depoist/depoist.php');
+
+                }
+
             }else{
 
                 echo "<p>Incorrect Password</p>";

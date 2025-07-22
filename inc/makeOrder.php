@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id']) || !isset($_POST['products'])) {
 
 $user_id = $_SESSION['user_id'];
 $products = $_POST['products'];
-$destination = "Your predefined destination"; 
+$destination = $_POST['destination']; 
 
 $totalAmount = 0;
 
@@ -76,8 +76,7 @@ try {
 
     $conn->commit();
 
-    // Redirect to confirmation page
-    header("Location: ../display/orderSuccess.php?order_id=$order_id");
+    header("Location: ../display/dashboard.php");
     exit;
 
 } catch (Exception $e) {

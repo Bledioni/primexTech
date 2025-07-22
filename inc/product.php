@@ -76,7 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
                 <input type="number" name="quantity" min="1" required>
                 <button type="submit">Add to Cart</button>
-                <i id="wishlist" class="fa-solid fa-heart"></i>
+            </form>
+
+            <form action="./wishlistLogic.php" method="POST">
+                <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
+                <button type="submit" style="background:none ; border: none;">
+                    <i id="wishlist" class="fa-solid fa-heart"></i>
+                </button>
             </form>
 
             <div class="futures">
