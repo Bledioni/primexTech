@@ -15,7 +15,7 @@
         $stmt->bindParam(':oid' , $order_id);
         $stmt->execute();
 
-        header("refresh: 0;url=./depoist.php?order_id=$order_id");
+        header("refresh: 0;url=../depoist/depoist.php?order_id=$order_id");
 
         
 

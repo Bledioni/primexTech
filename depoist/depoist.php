@@ -11,8 +11,17 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="../depoist/depoistOrders.php"><button>Orders</button></a>
-    <a href="./qrCode.php"><button>Add Product</button></a>
-    <a href="./setUpProduct.php"><button>SetUp Product</button></a>
+
+    <?php
+    
+        include_once '../pannelInc/navBarInc.php';
+
+    ?>
+
+    <?php
+    
+        include_once '../pannelInc/depoistMenuInc.php';
+
+    ?>
 </body>
 </html>

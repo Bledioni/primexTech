@@ -1,0 +1,20 @@
+.nav{
+
+    border-bottom:  1px solid;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    text-align: end;
+    padding: 2rem;
+
+}
+
+.nav select{
+
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 5px;
+    border: 2px solid;
+
+}
+

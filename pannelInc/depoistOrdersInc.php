@@ -32,6 +32,12 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
+    <?php
+    
+        include_once '../pannelInc/depoistMenuInc.php'
+
+    ?>
+
 <?php foreach ($products as $product): ?>
     <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
         <img style="width:100px;" src="<?= htmlspecialchars($product['image_path']) ?>" alt="">
@@ -42,7 +48,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <p>Date: <?= htmlspecialchars($product['created_at']) ?></p>
         <p>Order ID: <?= htmlspecialchars($product['order_id']) ?></p>
 
-        <form action="./changeStatus.php" method="POST">
+        <form action="../pannelInc/changeStatusInc.php" method="POST">
             <input type="hidden" name="order_id" value="<?= htmlspecialchars($product['order_id']) ?>" />
             <button type="submit" name="shipp">Confirm</button>
         </form>
