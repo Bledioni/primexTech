@@ -1,0 +1,43 @@
+
+.qr-code-reader{
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 0;
+
+
+}
+
+*{
+
+    text-decoration: none;
+
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+#reader {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    height: 400px;
+
+}
+
+#reader button{
+
+    background-color: #db4444;
+    padding: 0.5rem;
+    padding-inline: 2rem;
+    border-radius: 5px;
+    border: none;
+    color: white;    
+}

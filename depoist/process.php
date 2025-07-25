@@ -23,6 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 </head>
 <body>
 
+<?php  
+
+  require_once '../pannelInc/navBarInc.php'
+
+?>
+
 <?php if (!empty($products)): ?>
   <?php foreach ($products as $product): ?>
     <h1><?= htmlspecialchars($product['name']) ?></h1>

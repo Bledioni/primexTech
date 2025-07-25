@@ -4,28 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
+  <link rel="stylesheet" href="../pannelInc/style/setUpProduct.css">
+  <link rel="stylesheet" href="../pannelInc/style/navBarInc.css">
 </head>
 <body>
 
-<form action="" method="post" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="Product Name" required>
-    
-    <select name="category" id="category" required>
-        <option value="Computer">Computer</option>
-        <option value="Gaming">Gaming</option>
-        <option value="Camera">Camera</option>
-        <option value="HeadPhones">HeadPhones</option>
-        <option value="Phones">Phones</option>
-        <option value="SmartWatch">SmartWatch</option>
-    </select>
-    
-    <input type="text" name="description" placeholder="Product Description" required>
-    <input type="file" name="image" accept="image/*" required>  
-    <input type="number" name="price" placeholder="Product Price" required>
-    <input type="number" name="stock" placeholder="Stock" required>
-    
-    <button type="submit" name="generate">Submit</button>
-</form>
+<?php 
+
+    require_once '../config/config.php';
+
+    include_once '../pannelInc/navBarInc.php'; 
+
+?>
+
+<div class="setUp-Product">
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Product Name" required>
+        
+        <select name="category" id="category" required>
+            <option value="Computer">Computer</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Camera">Camera</option>
+            <option value="HeadPhones">HeadPhones</option>
+            <option value="Phones">Phones</option>
+            <option value="SmartWatch">SmartWatch</option>
+        </select>
+        
+        <input type="text" name="description" placeholder="Product Description" required>
+        <input type="file" name="image" accept="image/*" required>  
+        <input type="number" name="price" placeholder="Product Price" required>
+        <input type="number" name="stock" placeholder="Stock" required>
+        
+        <button type="submit" name="generate">Submit</button>
+    </form>
+</div>
 
 <?php
 
@@ -68,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['generate'])) {
             ':price' => $price,
             ':image_path' => $targetPath,
             ':qrCode' => $randomNumber,
-            ':stock' => $stock
+            ':stock' => $stock,
         ]);
 
         // Show QR Code only

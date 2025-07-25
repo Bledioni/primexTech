@@ -29,17 +29,18 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
+    <link rel="stylesheet" href="../pannelInc/style/depoistOrdersInc.css">
 </head>
 <body>
 
-    <?php
-    
-        include_once '../pannelInc/depoistMenuInc.php'
+<?php
 
-    ?>
+    require_once './navBarInc.php';
+
+?>
 
 <?php foreach ($products as $product): ?>
-    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+    <div class="order-card">
         <img style="width:100px;" src="<?= htmlspecialchars($product['image_path']) ?>" alt="">
         <h2><?= htmlspecialchars($product['title']) ?></h2>
         <p>Destination: <?= htmlspecialchars($product['destinacion']) ?></p>

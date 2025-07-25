@@ -18,10 +18,5 @@
 
     ?>
 
-    <?php
-    
-        include_once '../pannelInc/depoistMenuInc.php';
-
-    ?>
 </body>
 </html>
