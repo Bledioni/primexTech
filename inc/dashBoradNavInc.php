@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <body>
 
     <!-- navbar per dashboard  -->
+
     <div class="main-container-nav">
 
         <h3>PrimexTech</h3>
@@ -59,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>Contact</h3>
             <h3>About</h3>
         </div>
+        
         <div class="right-container">
+            
 
             <div id="account-cart">
 
@@ -90,6 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </div>
     </div>
+
+        <div class="nav-explore-produtcs">
+            <h2>Elevate Your Tech Game Today</h2>
+            <h5>Discover cutting-edge gadgets, unbeatable prices, and fast delivery — all in one place. Shop smart. Shop the future.</h5>
+            <h4>Free shipping on orders over €50 | Limited-time deals daily</h4>
+        </div>
 
     <div id="search-bar">
         <form action="" method="GET">

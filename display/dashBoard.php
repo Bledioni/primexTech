@@ -31,13 +31,13 @@
 
     <?php
     
-        include_once '../inc/dashBoradNavInc.php';
+        include_once '../inc/adDashBoardInc.php';
 
     ?>
 
     <?php
     
-        include_once '../inc/adDashBoardInc.php';
+        include_once '../inc/dashBoradNavInc.php';
 
     ?>
 <!-- Scrollable product row -->

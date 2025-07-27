@@ -11,18 +11,8 @@
 
     <div class="add-main-container">
 
-        <div class="products-by-categories">
-
-            <p>Laptop</p>
-            <p>Laptop</p>
-            <p>Laptop</p>
-            <p>Laptop</p>
-            <p>Laptop</p>
-
-        </div>
-
         <video autoplay muted loop playsinline>
-            <source id="iphoneAdd" src="../assets/photos/iPhone 16 Pro Reveal (4K).mp4" type="video/mp4">
+            <source id="iphoneAdd" src="../assets/photos/ios16.mp4" type="video/mp4">
         </video>
 
     </div>
