@@ -1,4 +1,10 @@
 
+body{
+
+    margin-inline:6rem ;
+
+}
+
 .product-box-container{
 
     display: flex;
@@ -9,7 +15,7 @@
 
 .product-box{
 
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-inline: 0rem;
     width: 220px;
     height: 220px;
@@ -26,25 +32,19 @@
     text-align: start;
 
 
-}
+}k
 
 .product-box h4{
 
-    margin-top: 3rem;
+    margin-top: 1rem;
 
 }
-
-.grey-photo{
-
-    width: 220px;
-
-}
-
 
 .product-photo{
 
-    margin-inline: 1rem;
-    width: 180px;
-    margin-top: -10rem;
+    width: 150px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+
 
 }

@@ -29,17 +29,24 @@
 </head>
 <body>
 
+<?php
+    
+        include_once '../inc/dashBoradNavInc.php';
+
+    ?>
+
+    <?php
+    
+        include_once '../inc/mainTextNav.php';
+
+    ?>
+
     <?php
     
         include_once '../inc/adDashBoardInc.php';
 
     ?>
 
-    <?php
-    
-        include_once '../inc/dashBoradNavInc.php';
-
-    ?>
 <!-- Scrollable product row -->
 
 <!-- Scroll buttons -->

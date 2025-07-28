@@ -30,10 +30,7 @@ a:visited{
     align-items: center;
     position: sticky;
     gap: 2rem;
-    color: #fefefe;
-    margin-top: -45rem;
-    margin-bottom: 45rem;
-    
+    color: black;
 
 }
 
@@ -51,7 +48,7 @@ a:visited{
     padding-bottom: 5px;
     border-bottom: 1px solid;
     font-weight: 600;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 22px;
 
 }
@@ -109,7 +106,6 @@ a:visited{
 }
 
 
-
 #search{
     width: 80%;
     border: 1px solid;
@@ -131,11 +127,6 @@ a:visited{
 
 }
 
-.fa-solid{
-
-    color: white;
-
-}
 
 
 /* nav responsivnes */
@@ -231,6 +222,7 @@ video{
     object-fit: cover;
     display: block;
     margin-inline: 0;
+    margin-top: -30rem;
 
 }
 
@@ -248,9 +240,9 @@ video{
 
 
 .nav-explore-produtcs{
-    margin-top: -35rem;
     color: rgb(255, 255, 255);
-    margin-bottom: 20rem;
+    position: sticky;
+    padding-top: 15rem;
     font-size: 25px;
     text-shadow:
   0 0 15px rgba(0, 0, 0, 0.8),
@@ -282,7 +274,6 @@ video{
         margin: auto;
 
     }
-
     .products-by-categories{
 
         display: none;
