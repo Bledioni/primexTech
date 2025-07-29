@@ -166,6 +166,7 @@ form{
     text-align: center;
     font-family: sans-serif;
     transition: transform 0.2s ease;
+    margin-top: 2rem;
 }
 
 .related-product img {

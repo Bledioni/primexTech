@@ -117,19 +117,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
 
-<div class="related-products-container">
-<?php foreach ($categories as $category): ?>
-    <?php if ($category['product_id'] !== $product['product_id'] && $category['category'] === $product['category']): ?>
-        <div class="related-product">
-            <img src="../uploads/<?= htmlspecialchars($category['image_path']) ?>" alt="">
-            <p class="name"><?= htmlspecialchars($category['name']) ?></p>
-            <p class="price"><?= htmlspecialchars($category['price']) ?>$</p>
-        </div>
-    <?php endif; ?>
-<?php endforeach; ?>
+    <div class="related-products-container">
+    <?php foreach ($categories as $category): ?>
+        <?php if ($category['product_id'] !== $product['product_id'] && $category['category'] === $product['category']): ?>
+            <a href="../inc/product.php?product_id=<?= $category['product_id'] ?>">
+            <div class="related-product">
+                <img src="../uploads/<?= htmlspecialchars($category['image_path']) ?>" alt="">
+                <p class="name"><?= htmlspecialchars($category['name']) ?></p>
+                <p class="price"><?= htmlspecialchars($category['price']) ?>$</p>
+            </div>
+            <a href=""></a>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
 </div>
-
 <?= include_once '../inc/footer.php' ?>
-
+</a>
 </body>
 </html>
