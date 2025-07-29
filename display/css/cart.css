@@ -1,118 +1,132 @@
-body{
-
+/* Reset some basic styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
     margin-inline: 6rem;
-
 }
 
+/* Table Layout */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 4rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 1rem;
+    padding: 1.2rem;
     text-align: center;
     vertical-align: middle;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 th {
-
-    font-weight: bold;
-    width: 25%;
+    background-color: #DB4444;
+    color: white;
+    font-weight: 600;
 }
 
-.table-line {
-    border-bottom: 2px solid black;
-    margin-top: 1rem;
-}
-
-.cart-photo-container{
-
+/* Product Image and Name */
+.cart-photo-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-
+    gap: 1rem;
+    justify-content: center;
 }
 
-.cart-bottom-container{
+.cart-photo-container img {
+    border-radius: 8px;
+}
 
+/* Checkout Container */
+.cart-checkout-container {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-checkout-container h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.cart-checkout-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.cart-checkout-container button[type="submit"],
+.cart-checkout-container button,
+.cart-coupon-container button {
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-checkout-container button[type="submit"]:hover,
+.cart-checkout-container button:hover,
+.cart-coupon-container button:hover {
+    background-color: #b83737;
+}
+
+/* Delete Button */
+form[action*="deleteFromProductFromCart"] button {
+    background-color: #ff6666;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+form[action*="deleteFromProductFromCart"] button:hover {
+    background-color: #cc4444;
+}
+
+/* Coupon container (if used) */
+.cart-coupon-container input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-bottom-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 4rem;
-
+    gap: 2rem;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        margin-inline: 1rem;
+    }
 
-.cart-coupon-container input{
+    .cart-checkout-container {
+        width: 100%;
+    }
 
-   
-    padding: 9px;
-    padding-inline: 2rem;
-
-}
-
-.cart-coupon-container button{
-
-    border-radius: 2px;
-    border: none;
-    color: white;
-    background-color: #DB4444;
-    text-align: center;
-    padding: 10px;
-    padding-inline: 2rem;
-}
-
-.cart-checkout-container{
-
-    display: flex;
-    flex-direction: column;
-    padding-inline: 2rem;
-    border: 2px solid;
-    border-radius: 5px ;
-
-}
-
-.cart-checkout-info{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10rem;
-    border-bottom: 1px solid;
-    
-}
-
-
-.cart-checkout-info:last-child{
-
-    border: none;
-
-}
-
-.cart-checkout-container button{
-
-    margin: 2rem;
-    border-radius: 2px;
-    border: none;
-    color: white;
-    background-color: #DB4444;
-    text-align: center;
-    padding: 10px;
-
-}
-
-.cart-delete-button button{
-
-    background-color: #DB4444;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem;
-    padding-inline: 1rem;
-    cursor: pointer;
+    table {
+        font-size: 0.9rem;
+    }
 }

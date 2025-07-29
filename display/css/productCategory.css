@@ -5,12 +5,12 @@ body{
 
 }
 
+
 .product-box-container{
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
 .product-box{
@@ -20,7 +20,6 @@ body{
     width: 220px;
     height: 220px;
     padding: 1rem;
-
 }
 
 .product-box img{
@@ -32,11 +31,21 @@ body{
     text-align: start;
 
 
-}k
+}
 
 .product-box h4{
 
     margin-top: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+
+}
+
+.product-box p{
+
+    margin-top: 0;
+    color: red;
+    font-weight: 600;
 
 }
 

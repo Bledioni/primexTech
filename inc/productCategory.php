@@ -36,7 +36,7 @@ if ($category) {
   <?php foreach ($products as $product): ?>
         <div class="product-box">
             <div class="product-photo-container">
-                <img class="product-photo" src="../uploads/<?= $product['image_path'] ?>" alt="">
+                <a href="../inc/product.php?product_id=<?= $product['product_id'] ?>"><img class="product-photo" src="../uploads/<?= $product['image_path'] ?>" alt=""></a>
             </div>
         <h4><?= htmlspecialchars($product['name']) ?></h4>
         <p><?= htmlspecialchars($product['price']) ?></p>

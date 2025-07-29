@@ -63,7 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php require_once '../inc/dashBoradNavInc.php'; ?>
 
-    <div class="product-container">
+    <div class="product-main-container">
+        <div class="product-container">
 
         <img class="product-main-image" src="../uploads/<?= htmlspecialchars($product['image_path']) ?>" alt="">
 
@@ -104,6 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
     </div>
+    </div>
 
     <div id="todays-header">
         <div id="todaysBox">
@@ -115,13 +117,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
 
+<div class="related-products-container">
 <?php foreach ($categories as $category): ?>
     <?php if ($category['product_id'] !== $product['product_id'] && $category['category'] === $product['category']): ?>
-        <img class="related-products" src="../uploads/<?= htmlspecialchars($category['image_path']) ?>" alt="" style="width:100px;">
-        <p style="font-weight:500; margin-top:5px;"><?= $product['name'] ?></p>
-        <p style="color: red; font-weight: 400; margin-top:5px;"><?= $product['price'] ?>$</p>
+        <div class="related-product">
+            <img src="../uploads/<?= htmlspecialchars($category['image_path']) ?>" alt="">
+            <p class="name"><?= htmlspecialchars($category['name']) ?></p>
+            <p class="price"><?= htmlspecialchars($category['price']) ?>$</p>
+        </div>
     <?php endif; ?>
 <?php endforeach; ?>
+</div>
 
 <?= include_once '../inc/footer.php' ?>
 
