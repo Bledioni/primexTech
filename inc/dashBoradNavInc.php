@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>PrimexTech</h3>
         <div class="links">
             <a href="../display/dashBoard.php"><h3>Home</h3></a>
-            <h3>Contact</h3>
-            <h3>About</h3>
+            <a href="#"><h3>Contact</h3></a>
+            <a href="#"><h3>Contact</h3></a>
         </div>
         
         <div class="right-container">
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     <div id="search-bar">
-        <form action="" method="GET">
+        <form action="../inc/searchInc.php" method="GET">
             <input id="search" type="search" name="query" placeholder="Search...">
             <button id="submit" type="submit">Search</button>
         </form>

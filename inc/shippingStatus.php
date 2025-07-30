@@ -58,20 +58,27 @@ WHERE
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../display/css/shippingStatus.css">
 </head>
 <body>
+
+    <?php include_once '../inc/dashBoradNavInc.php'; ?>
+
     <?php foreach($products as $product) { ?>
-        <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
-            <img style="width:100px;" src="../uploads/<?= $product['image_path'] ?>" alt="">
-            <h1><?= $product['name'] ?></h1>
-            <h1><?= $product['order_status'] ?></h1>
-            <h1><?= $product['quantity'] ?></h1>
-            <form action="./shipingDetailsLogic.php" method="post">
-                <input type="hidden" name="order_id" value="<?= htmlspecialchars($product['order_id']) ?>" />
-                <button type="submit" name="arrive">Arrived</button>
-            </form>
+    <div class="product-card">
+        <img src="../uploads/<?= htmlspecialchars($product['image_path']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" />
+        <div class="product-info">
+            <h1><?= htmlspecialchars($product['name']) ?></h1>
+            <div class="status"><?= htmlspecialchars($product['order_status']) ?></div>
+            <div class="quantity">Quantity: <?= (int)$product['quantity'] ?></div>
         </div>
-    <?php } ?>     
+        <form action="./shipingDetailsLogic.php" method="post">
+            <input type="hidden" name="order_id" value="<?= htmlspecialchars($product['order_id']) ?>" />
+            <button type="submit" name="arrive">Arrived</button>
+        </form>
+    </div>
+<?php } ?>
+
 
 </body>
 </html>
