@@ -23,6 +23,13 @@
 
 
     <style>
+
+        body{
+
+            margin-inline: 6rem;
+
+        }
+
         .button-wrapper {
             width: 220px;
             margin: 1rem auto; /* centers horizontally with auto left/right margin */

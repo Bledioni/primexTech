@@ -34,7 +34,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f9f9f9;
-        margin: 2rem;
+        margin-inline: 6rem;
         color: #333;
     }
 
@@ -67,7 +67,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     .wishlist-item img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
         border-radius: 6px;
         margin-bottom: 1rem;
