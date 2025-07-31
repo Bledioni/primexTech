@@ -1,0 +1,71 @@
+body{
+
+    margin-inline: 6rem;
+    
+}
+
+.our-story-main-container{
+
+    display: flex;
+    justify-content: space-between;
+    height: 30rem;
+    
+
+}
+
+.our-story-container{
+
+    width: 50%;
+    margin: auto;
+
+}
+
+.our-story-container h3{
+
+    font-size: 30px;
+
+}
+
+.our-story-image-container{
+
+    width: 50%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.our-story-image-container img{
+
+    width: 600px;
+    object-fit: contain;
+
+}
+
+.about-services-main-container{
+
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.services-container{
+
+    width: 300px;
+    object-fit: contain;
+    border: 2px solid grey;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+
+}
+
+.services-container img{
+
+    width: 100px;
+
+}

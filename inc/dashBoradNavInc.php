@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>PrimexTech</h3>
         <div class="links">
             <a href="../display/dashBoard.php"><h3>Home</h3></a>
-            <a href="#"><h3>Contact</h3></a>
+            <a href="../inc/about.php"><h3>About</h3></a>
             <a href="#"><h3>Contact</h3></a>
         </div>
         
