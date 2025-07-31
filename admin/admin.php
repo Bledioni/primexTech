@@ -19,17 +19,10 @@
     <link rel="stylesheet" href="../assets/admin/addProducts.css">
 </head>
 <body>
-
-   
-
     
-        <?php
+    <?php require_once '../admin/adminNav.php' ?>
 
-            include_once '../inc/adminNavInc.php';
-            include_once '../inc/adminInc.php';
+    <?php require_once '../admin/dashboard.php' ?>
 
-        ?>
-
-   
 </body>
 </html>

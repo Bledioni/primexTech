@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="nav-explore-produtcs">
+        <div class="nav-explore-produtcs">
             <h2>Elevate Your Tech Game Today</h2>
             <h5>Discover cutting-edge gadgets, unbeatable prices, and fast delivery — all in one place. Shop smart. Shop the future.</h5>
             <h4>Free shipping on orders over €50 | Limited-time deals daily</h4>

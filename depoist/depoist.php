@@ -18,5 +18,7 @@
 
     ?>
 
+    <?php include_once '../pannelInc/viewProductsInc.php' ?>
+
 </body>
 </html>

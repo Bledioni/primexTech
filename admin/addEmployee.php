@@ -4,65 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../display/css/adminAddEmployee.css">
 </head>
 <body>
-    <form action="" method="POST">
-        <input type="text" name="first_name" placeholder="First Name" required>
-        <input type="text" name="last_name" placeholder="Last Name" required>
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button name="submit">Submit</button>
-    </form>
+
+    <?php include_once '../admin/adminNav.php'; ?>
+
+    <div class="form-container">
+        <form action="" method="POST">
+            <input name="firstname" type="text" required placeholder="First Name">
+            <input name="lastname" type="text" required placeholder="Last Name">
+            <input name="email" type="email" required placeholder="Email">
+            <input name="password" type="password" required  placeholder="Password">
+            <button name="submit" type="submit">Add Employee</button>
+        </form>
+    </div>
+
 </body>
 </html>
+
 
 <?php
 
     require_once '../config/config.php';
 
-    if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
 
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $hashedPassword = password_hash($password , PASSWORD_DEFAULT);
         $role = 'depoist';
 
-        $hashedPassword = password_hash($password , PASSWORD_DEFAULT);
-
-        $checkEmailQuery = "SELECT * FROM users WHERE email = :email";
-
-        $checkEmailStmt = $conn->prepare($checkEmailQuery);
-        $checkEmailStmt->bindParam(':email' , $email);
-
-        $checkEmailStmt->execute();
-
-        if($checkEmailStmt->rowCount() > 0){
-
-            echo "This user exists";
-
-        
-
-        }else{
-
-            $query = "INSERT INTO users(firstname , lastname , email ,password , role)
-        VALUES (:first_name , :last_name , :email , :password , :role)";
+        $query = "INSERT INTO users(firstname , lastname , email , password , role)
+        VALUES(:firstname , :lastname , :email , :password , :role)";
 
         $stmt = $conn->prepare($query);
-        $stmt->bindParam(':first_name' , $first_name);
-        $stmt->bindParam(':last_name' , $last_name);
+        $stmt->bindParam(':firstname' , $firstname);
+        $stmt->bindParam(':lastname' , $lastname);
         $stmt->bindParam(':email' , $email);
         $stmt->bindParam(':password' , $hashedPassword);
         $stmt->bindParam(':role' , $role);
 
-        $stmt->execute();
+        if($stmt->execute()){
+
+            header('refresh:0; url=../admin/adminNav.php');
 
         }
 
-        }else{
+        else{
 
-
+            echo "Something Went Wrong";
 
         }
+
+    }
 
 ?>
