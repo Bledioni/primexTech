@@ -52,7 +52,7 @@ body{
 
 .services-container{
 
-    /* width: 300px; */
+    width: 300px;
     object-fit: contain;
     border: 2px solid grey;
     padding: 2rem;
