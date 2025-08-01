@@ -39,12 +39,12 @@
             <h4>10.5k</h4>
             <p>Sallers active our site</p>
         </div>
-        <!-- <div class="services-container">
+        <div class="services-container">
             <img src="../assets/photos/annualGross.png" alt="">
             <h4>10.5k</h4>
             <p>Sallers active our site</p>
         </div>
-    </div> -->
+    </div>
 
 </body>
 </html>
