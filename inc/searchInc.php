@@ -42,11 +42,11 @@ $totalPages = ceil($total / $limit);
 </head>
 <body>
 
-    <?php
+    <!-- <?php
     
         include_once '../inc/dashBoradNavInc.php';
 
-    ?>
+    ?> -->
 
    <div class="product-box-container">
 <?php foreach ($products as $product): ?>
