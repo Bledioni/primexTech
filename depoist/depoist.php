@@ -12,11 +12,11 @@
 </head>
 <body>
 
-    <!-- <?php
+    <?php
     
         include_once '../pannelInc/navBarInc.php';
 
-    ?> -->
+    ?>
 
     <?php include_once '../pannelInc/viewProductsInc.php' ?>
 
