@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
     $product_id = (int) $_POST['product_id'];
 
  
-    $check = $conn->prepare("SELECT * FROM wishlist WHERE user_id = :user_id AND product_id = :product_id");
-    $check->execute([
-        ':user_id' => $user_id,
-        ':product_id' => $product_id
-    ]);
+    // $check = $conn->prepare("SELECT * FROM wishlist WHERE user_id = :user_id AND product_id = :product_id");
+    // $check->execute([
+    //     ':user_id' => $user_id,
+    //     ':product_id' => $product_id
+    // ]);
 
     if ($check->rowCount() > 0) {
         echo "Product already in wishlist.";
