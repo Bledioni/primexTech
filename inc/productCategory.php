@@ -41,8 +41,8 @@ if ($category) {
         <h4><?= htmlspecialchars($product['name']) ?></h4>
         <p><?= htmlspecialchars($product['price']) ?></p>
     </div>
-<?php endforeach; ?>  
-</div>  
+<!-- <?php endforeach; ?>  
+</div>   -->
 
 </body>
 </html>
