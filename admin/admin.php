@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <?php require_once '../admin/adminNav.php' ?>!
+    <?php require_once '../admin/adminNav.php' ?>
 
     <?php require_once '../admin/dashboard.php' ?>
 
