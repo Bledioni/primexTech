@@ -29,44 +29,13 @@ $sales = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Sales Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: white;
-            padding: 30px;
-        }
-
-        .dashboard-container {
-            margin-top: 5rem;
-            max-width: 800px;
-            margin-inline: auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        canvas {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="../display/css/adminDashBoard.css">
 </head>
 <body>
 
     <?php require_once '../admin/adminNav.php'; ?>
+
+    <?php require_once '../admin/adminStats.php' ?>
 
     <div class="dashboard-container">
         <h3>📊 Sales Per Day</h3>
