@@ -37,6 +37,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../display/css/adminStats.css">
 </head>
 <body>
 
@@ -74,9 +75,19 @@
         }
     ?>
 
+    <div class="dashboard-stats">
+  <div class="stat-card red">
     <h1>Active users: <?= $total_users ?></h1>
-    <h1>Orders: <?= $total_orders ?></h1>
-    <h1>Products: <?= $total_produts ?></h1>
+  </div>
+  <div class="stat-card purple">
+    <h1>Active Orders: <?= $total_orders ?></h1>
+  </div>
+  <div class="stat-card blue">
+    <h1>Active Products: <?= $total_produts ?></h1>
+  </div>
+</div>
+
+
 
 </body>
 </html>
