@@ -83,7 +83,7 @@ $signups = $userStmt->fetchAll(PDO::FETCH_ASSOC);
                     tension: 0.3,
                     pointBackgroundColor: '#4CAF50',
                     pointRadius: 4
-                }]
+                }];
             },
             options: {
                 responsive: true,
