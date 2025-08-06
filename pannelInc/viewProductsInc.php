@@ -85,7 +85,7 @@ if ($stmt->rowCount() > 0) {
                             <?= htmlspecialchars($product['stock']) ?>
                         </div>
                         <div class="product-buttons">
-                            <form action="./deleteProduct.php">
+                            <form action="../pannelInc/deleteProduct.php">
                                 <input type="hidden" name="product_id" value="<?= htmlspecialchars($product['product_id'])?>" name="">
                                 <button name="submit" >Delete</button>
                             </form>

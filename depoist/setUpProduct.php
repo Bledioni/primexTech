@@ -32,7 +32,7 @@
         
         <input type="text" name="description" placeholder="Product Description" required>
         <input type="file" name="image" accept="image/*" required>  
-        <input type="number" name="price" placeholder="Product Price" required>
+        <input type="number" name="price" placeholder="Product Price" step="0.01" required>
         <input type="number" name="stock" placeholder="Stock" required>
         
         <button type="submit" name="generate">Submit</button>
