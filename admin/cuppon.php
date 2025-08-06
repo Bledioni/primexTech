@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     }
 
     
-        echo generateRandomCode(12) . "<br>";
+        echo generateRandomCode(12) . "<br>":
     }
 
 ?>
