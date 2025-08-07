@@ -1,6 +1,6 @@
 <?php
-require_once '../config/config.php';
 
+    require_once '../config/config.php';
 
 if (!isset($_SESSION['user_id']) || !isset($_POST['products'])) {
     die("Unauthorized access.");
@@ -9,6 +9,7 @@ if (!isset($_SESSION['user_id']) || !isset($_POST['products'])) {
 $user_id = $_SESSION['user_id'];
 $products = $_POST['products'];
 $destination = $_POST['destination']; 
+$coupon_code = trim($_POST['coupon_code'] ?? '');
 
 $totalAmount = 0;
 
@@ -31,7 +32,26 @@ try {
         }
     }
 
-    // Insert into `orders` table
+    $discountPercent = 0;
+
+    // Check coupon code validity
+    if ($coupon_code !== '') {
+        $couponStmt = $conn->prepare("SELECT discount FROM cuppon WHERE  = :code LIMIT 1");
+        $couponStmt->execute([':code' => $coupon_code]);
+        $couponData = $couponStmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($couponData) {
+            $discountPercent = (float)$couponData['discount']; // Assuming discount is percentage (e.g., 10 for 10%)
+        }
+    }
+
+    // Apply discount if any
+    if ($discountPercent > 0) {
+        $discountAmount = ($totalAmount * $discountPercent) / 100;
+        $totalAmount -= $discountAmount;
+    }
+
+    // Insert into orders table
     $orderStmt = $conn->prepare("
         INSERT INTO orders (client_id, total_amount, status, created_at)
         VALUES (:uid, :total, 'pending', NOW())
@@ -83,3 +103,6 @@ try {
     $conn->rollBack();
     die("Order failed: " . $e->getMessage());
 }
+
+
+?>
