@@ -161,7 +161,6 @@ if (empty($cartProducts)) {
             <option value="Mamushe">Mamushe</option>
             <option value="Partesh">Partesh</option>
             <option value="Ranillug">Ranillug</option>
-            <option value="Ranillug">Ranillug</option>
         </select>
 
         <!-- Submit order -->
