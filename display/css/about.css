@@ -115,3 +115,16 @@ body{
     font-size: 20px;
 
 }
+.staff-details-container p{
+
+    margin-top: 0;
+
+}
+
+.staff-details-container h5{
+
+    margin-bottom: 5px;
+    font-size: 34px;
+    margin-top: 0;
+
+}
