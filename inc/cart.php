@@ -30,6 +30,7 @@ $stmt = $conn->prepare($query);
 $stmt->bindParam(':uid', $user_id); // Bind user ID to prevent SQL injection
 $stmt->execute();
 $cartProducts = $stmt->fetchAll(PDO::FETCH_ASSOC); // Fetch all cart items
+
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +72,22 @@ if (empty($cartProducts)) {
             <?php foreach ($cartProducts as $cartProduct): ?>
                 <?php
                     $subtotal = $cartProduct['price'] * $cartProduct['quantity']; // Calculate subtotal
-                    $total += $subtotal; // Add to total
+
+                    $CupponQuery = "SELECT * FROM cuppon";
+
+                    $CupponStmt = $conn->prepare($CupponQuery);
+                    $CupponStmt->execute();
+
+                    $cuppon = $CupponStmt->fetch();
+
+                    if($CupponStmt->rowCount() > 0){
+
+                        $subtotal -= $cuppon['discount'];
+
+                    }
+
+                    ($total += $subtotal); // Add to total
+
                 ?>
                 <tr>
                     <td>
@@ -151,6 +167,13 @@ if (empty($cartProducts)) {
         <button type="submit">Proceed to Checkout</button>
     </div>
 </form>
+
+<form action="">
+    <input type="text" placeholder="Enter Cuppon Code">
+    <button type="submit" name="cuppon_submit">Submit</button>
+</form>
+
+
 <?php } ?>
 
 </body>

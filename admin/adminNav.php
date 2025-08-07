@@ -24,7 +24,7 @@
                     <button class="button"><i class="fa-solid fa-box"></i> <a class="button" href="../admin/dashboard.php">Dashboard</a></button>
                     <button class="button"><i class="fa-solid fa-box"></i> <a class="button" href="../admin/viewProductsAdmin.php">All Products</a></button>
                     <button class="button"><i class="fa-solid fa-list"></i> <a class="button" href="../admin/addEmployee.php">Add Employee</a></button>
-                    <button class="button"><i class="fa-solid fa-list"></i> <a class="button" href="../admin/cuppon.php">Add Cuppon</a></button>
+                    <button class="button"><i class="fa-solid fa-list"></i> <a class="button" href="../admin/cuppon.php">Cuppon</a></button>
                     <form action="../admin/adminCategories.php" method="GET">
                         <select name="category" id="category" required onchange="this.form.submit()">
                             <option value="" disabled selected>Select a category</option>

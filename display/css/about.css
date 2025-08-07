@@ -52,20 +52,66 @@ body{
 
 .services-container{
 
-    width: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
-    border: 2px solid grey;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px gray;
+    transition: 0.2s ease-in-out;
+
+}
+
+.services-container:hover{
+
+    box-shadow: 0 0 15px gray;
+
+}
+
+.services-container h4{
+
+    font-size: 36px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
 }
 
 .services-container img{
 
     width: 100px;
+
+}
+
+/* staff-main-container */
+
+.staff-main-container{
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-inline: 1rem;
+}
+
+.staff-details-container img{
+
+    max-width: 400px;
+
+}
+
+.soccial-media-container {
+
+    gap: 1rem;
+
+}
+
+.fa-brands{
+
+    margin-right: 8px;
+    font-size: 20px;
 
 }

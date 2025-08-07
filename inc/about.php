@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../display/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -43,6 +45,38 @@
             <img src="../assets/photos/annualGross.png" alt="">
             <h4>10.5k</h4>
             <p>Sallers active our site</p>
+        </div>
+    </div>
+    <div class="staff-main-container">
+        <div class="staff-details-container">
+            <img src="../assets/photos/tomCruise.png" alt="">
+            <h5>Tom Cruise</h5>
+            <p>Founder & Chairman</p>
+            <div class="soccial-media-container">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="staff-details-container">
+            <img src="../assets/photos/emmaWatson.png" alt="">
+            <h5>Emma Watson</h5>
+            <p>Managing Director</p>
+            <div class="soccial-media-container">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="staff-details-container">
+            <img src="../assets/photos/willSmith.png" alt="">
+            <h5>Will Smith</h5>
+            <p>Product Designer</p>
+            <div class="soccial-media-container">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
         </div>
     </div>
 
