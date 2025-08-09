@@ -62,7 +62,6 @@
             src="../assets/photos/headphonesCategories.png"
             alt="HeadPhones"
             class="categories-images"
-            class="categories-images"
           />
         </button>
         <button type="submit" name="category" value="phones">
