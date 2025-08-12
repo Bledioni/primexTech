@@ -130,3 +130,76 @@ form[action*="deleteFromProductFromCart"] button:hover {
         font-size: 0.9rem;
     }
 }
+
+/* Responsive Design Enhancements */
+@media screen and (max-width: 768px) {
+    body {
+        margin-inline: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    thead, tbody, tr, th, td {
+        display: table-row-group; /* keep table semantics */
+    }
+
+    th, td {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .cart-checkout-container {
+        width: 100%;
+        padding: 1rem;
+        box-shadow: none;
+        border: none;
+        margin-top: 1.5rem;
+    }
+
+    .cart-photo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .cart-photo-container img {
+        width: 80px;
+        height: auto;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    .cart-checkout-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .cart-checkout-container h4 {
+        font-size: 1.1rem;
+    }
+
+    .cart-checkout-container select {
+        font-size: 0.9rem;
+    }
+
+    form[action*="deleteFromProductFromCart"] button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    button, 
+    .cart-checkout-container button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
