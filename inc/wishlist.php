@@ -67,7 +67,8 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     .wishlist-item img {
-        max-width: 80%;
+        width: 10rem;
+        height:10rem;
         height: auto;
         border-radius: 6px;
         margin-bottom: 1rem;
