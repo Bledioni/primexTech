@@ -46,8 +46,8 @@ if ($category) {
 <!-- Price Range Filter -->
 <form method="GET" class="price-filter-form">
     <input type="hidden" name="category" value="<?= htmlspecialchars($category) ?>">
-    <label>Min Price: <input type="number" name="min_price" step="0.01" value="<?= $min_price ?>"></label>
-    <label>Max Price: <input type="number" name="max_price" step="0.01" value="<?= $max_price ?>"></label>
+    <label>Min Price: <input type="number" name="min_price" step="1" value="<?= $min_price ?>"></label>
+    <label>Max Price: <input type="number" name="max_price" step="1" value="<?= $max_price ?>"></label>
     <button type="submit">Filter</button>
 </form>
 
