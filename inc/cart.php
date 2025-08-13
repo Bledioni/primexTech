@@ -124,54 +124,58 @@ if (empty($cartProducts)) {
     </table>
 
     <!-- Checkout Section -->
-    <div class="cart-checkout-container">
-        <h4>Total: €<?= number_format($total, 2) ?></h4> <!-- Display total price -->
+    <div class="checkout-section-container">
+        <div class="cart-checkout-container">
+            <h4>Total: €<?= number_format($total, 2) ?></h4> <!-- Display total price -->
 
-        <!-- Dropdown for selecting shipping destination -->
-        <select name="destination" class="form-select" aria-label="Default select example">
-            <option selected>Select A City</option>
-            <option value="Prishtine">Prishtine</option>
-            <option value="Gjakove">Gjakove</option>
-            <option value="Peje">Peje</option>
-            <option value="Mitrovice">Mitrovice</option>
-            <option value="Prizren">Prizren</option>
-            <option value="Ferizaj">Ferizaj</option>
-            <option value="Gjilan">Gjilan</option>
-            <option value="Podujeve">Podujeve</option>
-            <option value="Vushtrri">Vushtrri</option>
-            <option value="Malisheve">Malisheve</option>
-            <option value="Rahovec">Rahovec</option>
-            <option value="Suhareke">Suhareke</option>
-            <option value="Drenas">Drenas</option>
-            <option value="Kamenice">Kamenice</option>
-            <option value="Viti">Viti</option>
-            <option value="Dragash">Dragash</option>
-            <option value="Skenderaj">Skenderaj</option>
-            <option value="Kline">Kline</option>
-            <option value="Deçan">Deçan</option>
-            <option value="Istog">Istog</option>
-            <option value="Leposaviq">Leposaviq</option>
-            <option value="Zubin Potok">Zubin Potok</option>
-            <option value="Zvecan">Zvecan</option>
-            <option value="Shterpce">Shterpce</option>
-            <option value="Novoberde">Novoberde</option>
-            <option value="Obiliq">Obiliq</option>
-            <option value="Hani i Elezit">Hani i Elezit</option>
-            <option value="Junik">Junik</option>
-            <option value="Mamushe">Mamushe</option>
-            <option value="Partesh">Partesh</option>
-            <option value="Ranillug">Ranillug</option>
-        </select>
+            <!-- Dropdown for selecting shipping destination -->
+            <select name="destination" class="form-select" aria-label="Default select example">
+                <option selected>Select A City</option>
+                <option value="Prishtine">Prishtine</option>
+                <option value="Gjakove">Gjakove</option>
+                <option value="Peje">Peje</option>
+                <option value="Mitrovice">Mitrovice</option>
+                <option value="Prizren">Prizren</option>
+                <option value="Ferizaj">Ferizaj</option>
+                <option value="Gjilan">Gjilan</option>
+                <option value="Podujeve">Podujeve</option>
+                <option value="Vushtrri">Vushtrri</option>
+                <option value="Malisheve">Malisheve</option>
+                <option value="Rahovec">Rahovec</option>
+                <option value="Suhareke">Suhareke</option>
+                <option value="Drenas">Drenas</option>
+                <option value="Kamenice">Kamenice</option>
+                <option value="Viti">Viti</option>
+                <option value="Dragash">Dragash</option>
+                <option value="Skenderaj">Skenderaj</option>
+                <option value="Kline">Kline</option>
+                <option value="Deçan">Deçan</option>
+                <option value="Istog">Istog</option>
+                <option value="Leposaviq">Leposaviq</option>
+                <option value="Zubin Potok">Zubin Potok</option>
+                <option value="Zvecan">Zvecan</option>
+                <option value="Shterpce">Shterpce</option>
+                <option value="Novoberde">Novoberde</option>
+                <option value="Obiliq">Obiliq</option>
+                <option value="Hani i Elezit">Hani i Elezit</option>
+                <option value="Junik">Junik</option>
+                <option value="Mamushe">Mamushe</option>
+                <option value="Partesh">Partesh</option>
+                <option value="Ranillug">Ranillug</option>
+            </select>
 
-        <!-- Submit order -->
-        <button type="submit">Proceed to Checkout</button>
+            <!-- Submit order -->
+            <button type="submit">Proceed to Checkout</button>
+        </div>
+    </form>
+
+    <div class="cuppon-code">
+        <form action="">
+            <input type="text" placeholder="Enter Cuppon Code">
+            <button type="submit" name="cuppon_submit">Submit</button>
+        </form>
     </div>
-</form>
-
-<form action="">
-    <input type="text" placeholder="Enter Cuppon Code">
-    <button type="submit" name="cuppon_submit">Submit</button>
-</form>
+    </div>
 
 
 <?php } ?>

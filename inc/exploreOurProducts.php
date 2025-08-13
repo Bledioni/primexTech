@@ -1,6 +1,12 @@
 <?php
 
-    require_once '../config/config.php';
+require_once '../config/config.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
 
     $query = "SELECT * FROM products ORDER BY rand() LIMIT 10 ";
     $stmt = $conn->prepare($query);

@@ -69,6 +69,60 @@ th {
     font-size: 1rem;
 }
 
+.checkout-section-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+}
+
+.cuppon-code {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 3rem;
+}
+
+.cuppon-code form {
+    display: flex;
+    gap: 10px;
+}
+
+.cuppon-code input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.cuppon-code input[type="text"]:focus {
+    border-color: #DB4444; /* highlight on focus */
+}
+
+.cuppon-code button {
+    padding: 10px 20px;
+    background-color: #DB4444;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cuppon-code button:hover {
+    background-color: #DB4444;
+}
+
+
 /* Buttons */
 .cart-checkout-container button[type="submit"],
 .cart-checkout-container button,
@@ -101,7 +155,7 @@ form[action*="deleteFromProductFromCart"] button:hover {
     background-color: #cc4444;
 }
 
-/* Coupon container (if used) */
+
 .cart-coupon-container input {
     padding: 0.6rem 1rem;
     border: 1px solid #ccc;

@@ -1,6 +1,15 @@
 <?php
 
-    require_once '../config/config.php';
+
+
+require_once '../config/config.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
+
 
 if (!isset($_SESSION['user_id']) || !isset($_POST['products'])) {
     die("Unauthorized access.");

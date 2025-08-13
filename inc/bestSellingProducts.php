@@ -1,6 +1,12 @@
 <?php
 require_once '../config/config.php'; // Include database connection and session config
 
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
 // Prepare SQL query to fetch products where type is 'bestsellingproducts'
 $query = "SELECT * FROM products WHERE type = 'bestsellingproducts'";
 $stmt = $conn->prepare($query);

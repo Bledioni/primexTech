@@ -2,6 +2,11 @@
 <?php
 
     require_once '../config/config.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit;
+}
     
     $uid = $_SESSION['user_id'];
 
@@ -58,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="links">
             <a href="../display/dashBoard.php"><h3>Home</h3></a>
             <a href="../inc/about.php"><h3>About</h3></a>
-            <a href="./contact.php"><h3>Contact</h3></a>
+            <a href="../inc/contact.php"><h3>Contact</h3></a>
         </div>
         
         <div class="right-container">

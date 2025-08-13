@@ -2,7 +2,8 @@
 require_once '../config/config.php';
 
 if (!isset($_SESSION['user_id'])) {
-    die("User not logged in.");
+    header('Location: ../login.php');
+    exit;
 }
 
 $user_id = $_SESSION['user_id'];
