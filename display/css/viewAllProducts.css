@@ -26,6 +26,15 @@ body {
     width: 200px;
     height: 300px;
     margin-top: 2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.product-box:hover{
+
+
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
 }
 
 
@@ -34,7 +43,7 @@ body {
     height: 150px; 
     overflow: hidden;
     border-radius: 5px; 
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
 }
 
 .product-photo {
@@ -56,8 +65,8 @@ h4 {
 }
 
 p {
-    color: #555;
-    font-weight: 700;
+    color: #DB4444;
+    font-weight: 600;
     font-size: 1rem;
     margin: 0;
 }
@@ -94,4 +103,29 @@ p {
     color: #fff;
     border-color: #a33232;
     box-shadow: 0 0 12px rgba(163, 50, 50, 0.9);
+}
+
+/* product-wishlist-shop-now */
+
+.heart-shop-now{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.heart-shop-now button{
+
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+    cursor: pointer;
+    
+
+}
+.heart-shop-now button:nth-child(2){
+
+    color: #DB4444;
+
 }

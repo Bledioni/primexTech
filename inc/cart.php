@@ -1,3 +1,4 @@
+
 <?php
 require_once '../config/config.php'; // Include database connection and start session
 
@@ -127,6 +128,13 @@ if (empty($cartProducts)) {
     <div class="checkout-section-container">
         <div class="cart-checkout-container">
             <h4>Total: €<?= number_format($total, 2) ?></h4> <!-- Display total price -->
+
+            <input type="text" name="first_name" placeholder="First Name" required> 
+            <input type="text" name="last_name" placeholder="Last Name" required> 
+            <input type="text" name="street_address" placeholder="Street Address Name" required>
+            <input type="text" name="apartment" placeholder="Apartment, floor, etc" required>
+            <input type="text" name="phone" placeholder="Phone Number" required> 
+            <input type="email" name="email" placeholder="Email Address" required>
 
             <!-- Dropdown for selecting shipping destination -->
             <select name="destination" class="form-select" aria-label="Default select example">

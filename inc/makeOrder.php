@@ -85,15 +85,15 @@ try {
             $price = $productData['price'];
 
             $itemStmt = $conn->prepare("
-                INSERT INTO order_items (order_id, product_id, destinacion, quantity, price)
-                VALUES (:order_id, :product_id, :dest, :quantity, :price)
+                INSERT INTO order_items (order_id, product_id, quantity, price , destination)
+                VALUES (:order_id, :product_id,:quantity, :price , :dest)
             ");
             $itemStmt->execute([
                 ':order_id' => $order_id,
                 ':product_id' => $pid,
-                ':dest' => $destination,
                 ':quantity' => $qty,
-                ':price' => $price
+                ':price' => $price,
+                ':dest' => $destination,
             ]);
         }
     }

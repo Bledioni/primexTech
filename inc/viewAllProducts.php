@@ -42,6 +42,22 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <h4><?= htmlspecialchars($product['name']) ?></h4>
                 <p><?= htmlspecialchars($product['price']) ?>$</p>
+                <div class="heart-shop-now">
+                    <form action="./wishlistLogic.php" method="POST">
+                        <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
+                        <button type="Submit">
+                            <i id="wishlist" class="fa-solid fa-heart"></i>
+                        </button>
+                    </form>
+                        <form action="../inc/addToCart.php?product_id=<?= $product['product_id'] ?>" method="POST">
+                        <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </form>
+                </div>
+                <form action="../inc/product.php?product_id=<?=$product['product_id']?>" method="POST">
+                        <input type="hidden" name="quantity" value="1">
+
+                    <button>Buy Now</button>
+                </form>
             </div>
         <?php endforeach; ?>
     </div>
