@@ -56,7 +56,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <form action="../inc/product.php?product_id=<?=$product['product_id']?>" method="POST">
                         <input type="hidden" name="quantity" value="1">
                 </form>
-                <form action="../inc/cart.php">
+                <form action="../inc/buyNowLogic.php" method="POST">
+                    <input name="product_id" type="hidden" value="<?= $product['product_id']?>">
+                    <input type="hidden" value="1" name="quantity">
                     <button class="wishlist-buy-now-button" >Buy Now</button>
                 </form>
             </div>

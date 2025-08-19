@@ -26,7 +26,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashBoard.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></link>
 
 </head>
 <body>
@@ -93,13 +92,6 @@
                 <h3><?= $product['name'] ?></h3>
                 <p><?= $product['price'] ?>$</p>
              </div>
-             <form action="../inc/product.php?product_id=<?=$product['product_id']?>" method="POST">
-                        <input type="hidden" name="quantity" value="1">
-                </form>
-                <form action="../inc/cart.php">
-                    <button class="wishlist-buy-now-button">Buy Now</button>
-                </form>
-
         </div>
     <?php } ?>
 </div>
