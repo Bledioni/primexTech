@@ -44,12 +44,32 @@ if ($category) {
 <?php include_once './dashBoradNavInc.php'; ?>
 
 <!-- Price Range Filter -->
+<!-- Price Range Filter with Slider -->
 <form method="GET" class="price-filter-form">
     <input type="hidden" name="category" value="<?= htmlspecialchars($category) ?>">
-    <label>Min Price: <input type="number" name="min_price" step="1" value="<?= $min_price ?>"></label>
-    <label>Max Price: <input type="number" name="max_price" step="1" value="<?= $max_price ?>"></label>
+
+    <label for="min_price">Min Price: </label>
+    <input type="range" id="min_price" name="min_price" 
+           min="0" max="1000" step="1" 
+           value="<?= $min_price !== null ? $min_price : 0 ?>"
+           oninput="document.getElementById('minPriceValue').textContent = this.value">
+
+    <span id="minPriceValue"><?= $min_price !== null ? $min_price : 0 ?></span> €
+
+    <br>
+
+    <label for="max_price">Max Price: </label>
+    <input type="range" id="max_price" name="max_price" 
+           min="0" max="1000" step="1" 
+           value="<?= $max_price !== null ? $max_price : 1000 ?>"
+           oninput="document.getElementById('maxPriceValue').textContent = this.value">
+
+    <span id="maxPriceValue"><?= $max_price !== null ? $max_price : 1000 ?></span> €
+
+    <br>
     <button type="submit">Filter</button>
 </form>
+
 
 <div class="product-box-container">
     <?php foreach ($products as $product): ?>
