@@ -20,6 +20,13 @@ $products = $_POST['products'];
 $destination = $_POST['destination']; 
 $coupon_code = trim($_POST['coupon_code'] ?? '');
 
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$street_address = $_POST['street_address'];
+$apartment = $_POST['apartment'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+
 $totalAmount = 0;
 
 // Start transaction
@@ -85,15 +92,22 @@ try {
             $price = $productData['price'];
 
             $itemStmt = $conn->prepare("
-                INSERT INTO order_items (order_id, product_id, quantity, price , destination)
-                VALUES (:order_id, :product_id,:quantity, :price , :dest)
+            INSERT INTO order_items 
+            (order_id, product_id, quantity, price, first_name, last_name, street_address, apartment, phone, email, destination)
+            VALUES (:order_id, :product_id, :quantity, :price, :fname, :lname, :saddress, :apt, :phone, :email, :dest)
             ");
             $itemStmt->execute([
                 ':order_id' => $order_id,
                 ':product_id' => $pid,
                 ':quantity' => $qty,
                 ':price' => $price,
-                ':dest' => $destination,
+                ':fname' => $first_name,
+                ':lname' => $last_name,
+                ':saddress' => $street_address,
+                ':apt' => $apartment,
+                ':phone' => $phone,
+                ':email' => $email,
+                ':dest' => $destination
             ]);
         }
     }

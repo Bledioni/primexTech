@@ -44,6 +44,8 @@ th {
     border-radius: 8px;
 }
 
+td
+
 /* Checkout Container */
 .cart-checkout-container {
     margin-top: 2rem;
@@ -146,7 +148,7 @@ th {
 
 /* Delete Button */
 form[action*="deleteFromProductFromCart"] button {
-    background-color: #f8f9fa;
+    background-color: #DB4444;
     border-radius: 5px;
     color: white;
     padding: 0.5rem 1rem;

@@ -3,7 +3,7 @@ require_once '../config/config.php';
 
 $query = "
     SELECT
-        order_items.destinacion,
+        order_items.destination,
         order_items.quantity,
         orders.total_amount,
         orders.order_id,
