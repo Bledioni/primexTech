@@ -206,3 +206,10 @@ body{
         width: 45%;
     }
 }
+
+.cart-wishlist-buttons{
+
+    display: flex;
+    align-items: center;
+
+}

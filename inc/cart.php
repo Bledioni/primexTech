@@ -177,12 +177,7 @@ if (empty($cartProducts)) {
         </div>
     </form>
 
-    <div class="cuppon-code">
-        <form action="">
-            <input type="text" placeholder="Enter Cuppon Code">
-            <button type="submit" name="cuppon_submit">Submit</button>
-        </form>
-    </div>
+   
     </div>
 
 

@@ -57,14 +57,14 @@ body {
     transform: none; /* disable hover transform */
 }
 
-h4 {
+.product-box h4 {
     margin: 0.5rem 0 0.3rem;
     color: #222;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-p {
+.product-box p {
     color: #DB4444;
     font-weight: 600;
     font-size: 1rem;

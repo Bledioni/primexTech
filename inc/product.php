@@ -72,7 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p style="font-weight:600;"><?= htmlspecialchars($product['price']) ?>$</p>
                 <p><?= htmlspecialchars($product['description']) ?></p>
 
-                <form action="" method="POST">
+
+                <div class="cart-wishlist-buttons">
+                    <form action="" method="POST">
                     <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
                     <input type="number" name="quantity" min="1" required>
                     <button type="submit">Add to Cart</button>
@@ -84,6 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <i id="wishlist" class="fa-solid fa-heart"></i>
                     </button>
                 </form>
+                </div>
 
                 <div class="futures">
                     <div class="delivery">

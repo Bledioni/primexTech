@@ -48,23 +48,23 @@ if ($category) {
 <form method="GET" class="price-filter-form">
     <input type="hidden" name="category" value="<?= htmlspecialchars($category) ?>">
 
-    <label for="min_price">Min Price: </label>
+    <label for="min_price">Min Price:</label>
     <input type="range" id="min_price" name="min_price" 
            min="0" max="1000" step="1" 
            value="<?= $min_price !== null ? $min_price : 0 ?>"
            oninput="document.getElementById('minPriceValue').textContent = this.value">
 
-    <span id="minPriceValue"><?= $min_price !== null ? $min_price : 0 ?></span> €
+    <span id="minPriceValue"><?= $min_price !== null ? $min_price : 0 ?></span>€
 
     <br>
 
-    <label for="max_price">Max Price: </label>
+    <label for="max_price">Max Price:</label>
     <input type="range" id="max_price" name="max_price" 
            min="0" max="1000" step="1" 
            value="<?= $max_price !== null ? $max_price : 1000 ?>"
            oninput="document.getElementById('maxPriceValue').textContent = this.value">
 
-    <span id="maxPriceValue"><?= $max_price !== null ? $max_price : 1000 ?></span> €
+    <span id="maxPriceValue"><?= $max_price !== null ? $max_price : 1000 ?></span>€
 
     <br>
     <button type="submit">Filter</button>
