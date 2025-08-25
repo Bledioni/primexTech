@@ -4,7 +4,7 @@ require_once '../config/config.php'; // Include database connection and start se
 
 // Redirect user to login page if not logged in
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
+    header('Location: ../auth/login.php');
     exit;
 }
 

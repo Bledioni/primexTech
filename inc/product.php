@@ -2,7 +2,7 @@
 require_once '../config/config.php';
 
 if (!isset($_SESSION['user_id'])) {
-    die("User not logged in.");
+    header('Location: ../auth/login.php');
 }
 
 $product_id = $_GET['product_id'] ?? null;

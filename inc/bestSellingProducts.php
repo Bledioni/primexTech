@@ -3,7 +3,7 @@ require_once '../config/config.php'; // Include database connection and session 
 
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
+    header('Location: ../auth/login.php');
     exit;
 }
 
