@@ -31,7 +31,7 @@ try {
             ':uid' => $user_id,
             ':pid' => $product_id
         ]);
-        echo "Updated quantity in cart.";
+        header('refresh: 0; url=../inc/viewAllProducts.php');
     } else {
         // Insert new cart item
         $stmt = $conn->prepare("INSERT INTO cart_items (user_id, product_id, quantity) VALUES (:uid, :pid, :qty)");
@@ -40,7 +40,7 @@ try {
             ':pid' => $product_id,
             ':qty' => $quantity
         ]);
-        echo "Added product to cart.";
+        header('refresh: 0; url=../inc/viewAllProducts.php');
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();

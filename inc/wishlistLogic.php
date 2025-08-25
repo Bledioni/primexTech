@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
     ]);
 
     if ($check->rowCount() > 0) {
-        echo "Product already in wishlist.";
+        header('refresh: 0; url=../inc/viewAllProducts.php');
         exit;
     }
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
     $stmt->bindParam(':product_id', $product_id);
 
     if ($stmt->execute()) {     
-        echo "Added to wishlist.";
+        header('refresh: 0; url=../inc/viewAllProducts.php');        
     } else {
         echo "Failed to add to wishlist.";
     }

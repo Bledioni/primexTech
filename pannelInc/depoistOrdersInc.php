@@ -43,7 +43,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="order-card">
         <img style="width:100px;" src="<?= htmlspecialchars($product['image_path']) ?>" alt="">
         <h2><?= htmlspecialchars($product['title']) ?></h2>
-        <p>Destination: <?= htmlspecialchars($product['destinacion']) ?></p>
+        <p>Destination: <?= htmlspecialchars($product['destination']) ?></p>
         <p>Quantity: <?= htmlspecialchars($product['quantity']) ?></p>
         <p>Total: <?= htmlspecialchars($product['total_amount']) ?></p>
         <p>Date: <?= htmlspecialchars($product['created_at']) ?></p>

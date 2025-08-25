@@ -50,11 +50,13 @@ $totalPages = ceil($total / $limit);
 
    <div class="product-box-container">
 <?php foreach ($products as $product): ?>
-    <div class="product-box">
+    <a href="../inc/product.php?product_id=<?= $product['product_id']?>">
+        <div class="product-box">
         <img src="../uploads/<?= htmlspecialchars($product['image_path']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
         <h4><?= htmlspecialchars($product['name']) ?></h4>
         <p><?= htmlspecialchars($product['price']) ?>€</p>
     </div>
+    </a>
 <?php endforeach; ?>
 </div>
 
